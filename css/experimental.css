@@ -29,24 +29,24 @@ body {
 
 /* Centers the image a bit */
 #gallery li:nth-child(4n+1):hover {
-  transform: scale(1.8) translateY(22%) translateX(22%);
-  -ms-transform: scale(1.8) translateY(22%) translateX(22%);
-  -webkit-transform: scale(1.8) translateY(22%) translateX(22%);
+  transform: scale(1.8) translateY(16%) translateX(16%);
+  -ms-transform: scale(1.8) translateY(16%) translateX(16%);
+  -webkit-transform: scale(1.8) translateY(16%) translateX(16%);
 }
 #gallery li:nth-child(4n+2):hover {
-  transform: scale(1.8) translateY(22%) translateX(11%);
-  -ms-transform: scale(1.8) translateY(22%) translateX(11%);
-  -webkit-transform: scale(1.8) translateY(22%) translateX(11%);
+  transform: scale(1.8) translateY(16%) translateX(8%);
+  -ms-transform: scale(1.8) translateY(16%) translateX(8%);
+  -webkit-transform: scale(1.8) translateY(16%) translateX(8%);
 }
 #gallery li:nth-child(4n+3):hover {
-  transform: scale(1.8) translateY(22%) translateX(-11%);
-  -ms-transform: scale(1.8) translateY(22%) translateX(-11%);
-  -webkit-transform: scale(1.8) translateY(22%) translateX(-11%);
+  transform: scale(1.8) translateY(16%) translateX(-8%);
+  -ms-transform: scale(1.8) translateY(16%) translateX(-8%);
+  -webkit-transform: scale(1.8) translateY(16%) translateX(-8%);
 }
 #gallery li:nth-child(4n+4):hover {
-  transform: scale(1.8) translateY(22%) translateX(-22%);
-  -ms-transform: scale(1.8) translateY(22%) translateX(-22%);
-  -webkit-transform: scale(1.8) translateY(22%) translateX(-22%);
+  transform: scale(1.8) translateY(16%) translateX(-16%);
+  -ms-transform: scale(1.8) translateY(16%) translateX(-16%);
+  -webkit-transform: scale(1.8) translateY(16%) translateX(-16%);
 }
 
 
