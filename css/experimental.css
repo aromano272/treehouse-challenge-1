@@ -77,7 +77,7 @@ HIDING NAV BAR GAPPS STYLE
 #nav-bar {
   width: 300px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -300px;
   background-color: #428bca;
@@ -108,7 +108,7 @@ has 100% width and height */
   height: 100%;
   width: 100%;
   background-color: #000;
-  position: absolute;
+  position: fixed;
   z-index: 1;  
   opacity: 0;
 
@@ -118,6 +118,20 @@ has 100% width and height */
 
 #fader.fadeout {
   opacity: 0.5;
+}
+
+#nav-bar,
+#fader {
+  /* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 0;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0;
+    /* Standard syntax */
+    transition-property: height;
+    transition-duration: 0;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 
