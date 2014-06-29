@@ -1,0 +1,118 @@
+/* Media queries yo! */
+
+@media screen and (min-width: 480px) {
+  
+  /********************************
+  PAGE: CONTACT
+  TWO COLUMN LAYOUT
+  ********************************/
+  
+  #primary {
+    width: 50%;
+    float: left;
+  }
+
+  #secondary {
+    width: 40%;
+    float: right;
+  }
+
+  /********************************
+  3 * 5 = 15
+  100 - 15% = 85%
+  85 / 3 = 28.3333
+  ********************************/
+
+
+  /********************************
+  PAGE: PORTFOLIO
+  ********************************/
+
+  #gallery li {
+    /* Makes 3 columns */
+    width: 28.3333%;
+  }
+  
+  /* Clears every 4th element of the portfolio so the captions resizing dont mess up the placement */
+  #gallery li:nth-child(4n) {
+    clear: left;
+  }
+
+
+
+  /********************************
+  PAGE: ABOUT
+  ********************************/
+
+  .profile-photo {
+    float: left;
+    margin: 0 5% 80px 0;
+  }
+
+}
+
+@media screen and (min-width: 680px) {
+  
+  /********************************
+  PAGE: HEADER
+  ********************************/
+  
+  header {
+  
+  }
+
+  nav {
+    background: none;
+    float: right;
+    font-size: 1.125em;
+    margin-right: 5%;
+    text-align: right;
+    width: 45%;
+    margin-top: 25px;
+  }
+
+  nav ul {
+    /* used to compensate padding on nav anchors padding, which is retained to keep the clicking box increased */
+    margin-right: -10px;
+    
+  }
+
+
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+    width: 45%;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  header {
+    border-bottom: 5px solid #6188BD;
+  }
+  
+
+}
+
+@media screen and (min-width: 780px) {
+  #gallery li {
+    /* Makes 4 columns */
+    width: 20%;
+  }
+
+  /* Reverses clear property of 3 columns layout */
+  #gallery li:nth-child(4n) {
+    clear: none;
+  }
+
+  #gallery li:nth-child(5n) {
+    clear: left;
+  }
+}

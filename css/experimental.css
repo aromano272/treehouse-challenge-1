@@ -1,0 +1,170 @@
+/******************************
+EXPERIMENTAL
+********************************/
+
+* {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#gallery li {
+  /* For Safari 3.1 to 6.0 */
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 0.1s;
+  -webkit-transition-timing-function: linear;
+  
+  /* Standard syntax */
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+/* Centers the image a bit */
+#gallery li:nth-child(4n+1):hover {
+  transform: scale(1.8) translateY(22%) translateX(22%);
+  -ms-transform: scale(1.8) translateY(22%) translateX(22%);
+  -webkit-transform: scale(1.8) translateY(22%) translateX(22%);
+}
+#gallery li:nth-child(4n+2):hover {
+  transform: scale(1.8) translateY(22%) translateX(11%);
+  -ms-transform: scale(1.8) translateY(22%) translateX(11%);
+  -webkit-transform: scale(1.8) translateY(22%) translateX(11%);
+}
+#gallery li:nth-child(4n+3):hover {
+  transform: scale(1.8) translateY(22%) translateX(-11%);
+  -ms-transform: scale(1.8) translateY(22%) translateX(-11%);
+  -webkit-transform: scale(1.8) translateY(22%) translateX(-11%);
+}
+#gallery li:nth-child(4n+4):hover {
+  transform: scale(1.8) translateY(22%) translateX(-22%);
+  -ms-transform: scale(1.8) translateY(22%) translateX(-22%);
+  -webkit-transform: scale(1.8) translateY(22%) translateX(-22%);
+}
+
+
+
+
+h2 {
+  text-shadow: 2px 2px 2px #245182;
+}
+
+h1 {
+  text-shadow: 1px 1px 4px #6188BD;
+}
+
+
+/********************************
+HIDING NAV BAR GAPPS STYLE
+********************************/
+
+#nav-bar ul {
+  list-style: none;
+  margin: 0;
+}
+
+.toggle-nav {
+  color: black;
+}
+
+#nav-bar {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -300px;
+  background-color: #428bca;
+  padding: 0;
+
+  z-index: 2;
+}
+
+#nav-bar.show-nav {
+  -webkit-transform: translateX(300px);
+  transform: translateX(300px);
+}
+
+header {
+  position: relative;
+  
+  z-index: 10;
+}
+
+#wrapper {
+  /* realigns content because of header{position:fixed;} */
+  padding-top: 8.75em;
+}
+
+/* fader performs the fading in and out, in its raw form its just an black invisible panel with
+has 100% width and height */
+#fader {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  z-index: 1;  
+  opacity: 0;
+
+  -webkit-transition: 0.5s ease-in-out all;
+  transition: 0.5s ease-in-out all;
+}
+
+#fader.fadeout {
+  opacity: 0.5;
+}
+
+
+/********************************
+FOOTER PLACEMENT  -  forces footer down, only works if #wrapper div closes before footer element, so footer stays outside of #wrapper
+********************************/
+/*
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#wrapper {
+    width: 100%;
+    min-height: 100%;
+    /* size of footer *//*
+    margin-bottom: -53px;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    clear: none;
+    padding: 0;
+}
+
+/* not required, only used for aesthetic purposes *//*
+footer p {
+  margin: 0.5em 0;
+}
+
+#wrapper:after {
+    content: ' ';
+    display: block;
+    /* size of footer *//*
+    height: 53px;
+}
+*/
+
+
+/********************************
+EXPERIMENTAL
+******************************/
