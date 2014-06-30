@@ -1,4 +1,4 @@
-/******************************
+/*****************************
 EXPERIMENTAL
 ********************************/
 
@@ -99,28 +99,33 @@ header {
 
 #wrapper {
   /* realigns content because of header{position:fixed;} */
-  padding-top: 8.75em;
+  /*padding: 8.75em;  no longer need since header:fixed was bad */
 }
 
 /* fader performs the fading in and out, in its raw form its just an black invisible panel with
 has 100% width and height */
 #fader {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
+  top: 0;
+  left: 0;
   background-color: #000;
   position: absolute;
   z-index: 1;  
-  opacity: 0;
-
-  -webkit-transition: 0.5s ease-in-out all;
-  transition: 0.5s ease-in-out all;
+  /*opacity: 0.5;*/
+  
+  /* the opacity parameter makes it so the transition effect only applies to opacity changes */
+  /* testing js fading */
+  /*-webkit-transition: 0.5s ease-in-out opacity;*/
+  /*transition: 0.5s ease-in-out opacity;*/
   
 }
 
-#fader.fadeout {
+/* using jquery to add inline styles */
+/*#fader.fadeout {
   opacity: 0.5;
   display: block;
-}
+}*/
 
 
 
@@ -171,4 +176,4 @@ footer p {
 
 /********************************
 EXPERIMENTAL
-******************************/
+*****************************/
