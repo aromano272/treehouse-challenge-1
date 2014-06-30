@@ -230,8 +230,8 @@ img:not([class]) {
   background-image: 
       linear-gradient(#EBEBEB, #F7F7F7),
       linear-gradient(#EBEBEB, #F7F7F7);
-  -moz-background-size: 3px 100%;
-  background-size: 3px 100%;
+  -moz-background-size: 6px 100%;
+  background-size: 6px 100%;
   background-position: 0 0, 100% 0;
   background-repeat: no-repeat; 
   padding: 0 3px;
