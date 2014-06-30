@@ -16,15 +16,9 @@ body {
 }
 
 #gallery li {
-  /* For Safari 3.1 to 6.0 */
-  -webkit-transition-property: transform;
-  -webkit-transition-duration: 0.1s;
-  -webkit-transition-timing-function: linear;
-  
-  /* Standard syntax */
-  transition-property: transform;
-  transition-duration: 0.1s;
-  transition-timing-function: linear;
+  /* webkit transition has to have webkit transform as a property and not just regular transform */
+  transition: transform 0.1s linear;
+  -webkit-transition: -webkit-transform 0.1s linear;
 }
 
 /* Centers the image a bit */
@@ -84,6 +78,9 @@ HIDING NAV BAR GAPPS STYLE
   padding: 0;
 
   z-index: 2;
+
+  transition: transform 0.1s ease-in-out;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
 }
 
 #nav-bar.show-nav {

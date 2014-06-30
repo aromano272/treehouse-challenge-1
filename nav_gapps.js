@@ -75,7 +75,7 @@ var fade_in = function() {
   if($("#fader").length) {
     $("#fader").stop(true,false).fadeIn(1000);
   } else {
-    // if fader doesnt exists, appendit
+    // if fader doesnt exists, create it
     $(fader).hide().appendTo("body").fadeIn(1000);
   }
 }
