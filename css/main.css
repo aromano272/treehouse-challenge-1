@@ -217,21 +217,24 @@ nav {
 /* Selects all images without a class */
 img:not([class]) {
   /* Experimenting with border gradients, although it would be 
-  10x easier/stable to apply a normal background gradient to li's */
-  border-top: 3px solid #EBEBEB;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#EBEBEB), to(#F7F7F7));
-  background-image: -webkit-linear-gradient(#EBEBEB, #F7F7F7);
+  10x easier/stable to apply a normal background gradient to li's 
+
+  Right border doesnt render properly on dolphin mobile*/
+  /* switched EBEBEB for 000 for testing purposes */
+  border-top: 3px solid #000;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(#F7F7F7));
+  background-image: -webkit-linear-gradient(#000, #F7F7F7);
   background-image:
-      -moz-linear-gradient(#EBEBEB, #F7F7F7),
-      -moz-linear-gradient(#EBEBEB, #F7F7F7);
+      -moz-linear-gradient(#000, #F7F7F7),
+      -moz-linear-gradient(#000, #F7F7F7);
   background-image:
-      -o-linear-gradient(#EBEBEB, #F7F7F7),
-      -o-linear-gradient(#EBEBEB, #F7F7F7);
+      -o-linear-gradient(#000, #F7F7F7),
+      -o-linear-gradient(#000, #F7F7F7);
   background-image: 
-      linear-gradient(#EBEBEB, #F7F7F7),
-      linear-gradient(#EBEBEB, #F7F7F7);
-  -moz-background-size: 6px 100%;
-  background-size: 6px 100%;
+      linear-gradient(#000, #F7F7F7),
+      linear-gradient(#000, #F7F7F7);
+  /*-moz-background-size: 100% 100%;
+  background-size: 100% 100%;*/
   background-position: 0 0, 100% 0;
   background-repeat: no-repeat; 
   padding: 0 3px;
