@@ -31,21 +31,30 @@
 ========================================*/
 
 var $menuOverlay = $("<div id='menu-overlay'></div>");
+var $navbar = $("#nav-bar");
 $("body").append($menuOverlay);
 
 
 $(".toggle-nav").click(function() {
-  if($("#nav-bar").hasClass("show-nav")) {
+  if($navbar.hasClass("show-nav")) {
     // nav close
-    $("#nav-bar").removeClass("show-nav");
+    $navbar.removeClass("show-nav");
     // fade in content
     $menuOverlay.stop(true,false).fadeOut(1000);    
   } else {
     // nav open
-    $("#nav-bar").addClass("show-nav");
+    $navbar.addClass("show-nav");
     // fade out content
     $menuOverlay.stop(true,false).fadeIn(1000);
   }
+});
+
+// fades in content on menuOverlay click
+$menuOverlay.click(function() {
+  // nav close
+  $navbar.removeClass("show-nav");
+  // fade in content
+  $menuOverlay.stop(true,false).fadeOut(1000);
 });
 
 
