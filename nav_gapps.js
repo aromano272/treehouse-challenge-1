@@ -1,6 +1,34 @@
-/*====================================
-=            ON DOM READY            =
-====================================*/
+/*========================================
+=               DEPRECATED               =
+========================================*/
+
+// 19
+// Doesnt work since we cant add and eventlistener to an element that still doesnt exist
+// $(function() {
+//   $(".fadeout").click(function () {
+//     toggleNav();
+//     console.log("sdada");
+//   });
+// });
+
+// 69
+// var toggleFader = function() {
+//   if($("#fader").length) {
+//     $("#fader").stop().fadeOut(1000, function(){
+//       $(this).remove();
+//     });
+//     // $("#fader").remove();
+//     console.log("fader removed");
+//   } else {
+//     $(fader).hide().appendTo("body").stop().fadeIn(1000);
+//     console.log("fader added");
+//   }
+// }
+
+
+/*========================================
+=              ON DOM READY              =
+========================================*/
 
 $(function() {
   $(".toggle-nav").click(function() {
@@ -11,13 +39,7 @@ $(function() {
   });
 });
 
-// Doesnt work since we cant add and eventlistener to an element that still doesnt exist
-// $(function() {
-//   $(".fadeout").click(function () {
-//     toggleNav();
-//     console.log("sdada");
-//   });
-// });
+
 
 // Solves the above problem, applying a rule to the parent, or document.
 $("body").on("click", ".fadeout", function() {
@@ -59,18 +81,6 @@ var toggleNav = function() {
 }
 
 
-// var toggleFader = function() {
-//   if($("#fader").length) {
-//     $("#fader").stop().fadeOut(1000, function(){
-//       $(this).remove();
-//     });
-//     // $("#fader").remove();
-//     console.log("fader removed");
-//   } else {
-//     $(fader).hide().appendTo("body").stop().fadeIn(1000);
-//     console.log("fader added");
-//   }
-// }
 
 var fade_in = function() {
   // if fader exists
@@ -107,7 +117,7 @@ $overlay.append($caption);
 $("#gallery a").click(function() {
   event.preventDefault();
   // show the overlay
-  $overlay.show();
+  $overlay.fadeIn(200);
 
   // update overlay with the image linked in the link
   var imageLocation = $(this).attr("href");
@@ -123,7 +133,7 @@ $("#gallery a").click(function() {
 // when overlay is clicked
 $overlay.click(function() {
   // hide the overlay
-  $(this).hide("slow");
+  $(this).fadeOut(200);
 });
 
 // stops the propagation of event, in this case the click event, up the dom tree,
