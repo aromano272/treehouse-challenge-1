@@ -27,9 +27,33 @@
 
 
 /*========================================
-=              ON DOM READY              =
+=         GAPPS MENU DIF APPROACH        =
 ========================================*/
 
+var $menuOverlay = $("<div id='menu-overlay'></div>");
+$("body").append($menuOverlay);
+
+
+$(".toggle-nav").click(function() {
+  if($("#nav-bar").hasClass("show-nav")) {
+    // nav close
+    $("#nav-bar").removeClass("show-nav");
+    // fade in content
+    $menuOverlay.stop(true,false).fadeOut(1000);    
+  } else {
+    // nav open
+    $("#nav-bar").addClass("show-nav");
+    // fade out content
+    $menuOverlay.stop(true,false).fadeIn(1000);
+  }
+});
+
+
+
+/*========================================
+=            CUSTOM FUNCTIONS            =
+========================================*/
+/*
 $(function() {
   $(".toggle-nav").click(function() {
     // toggleFader();
@@ -50,12 +74,6 @@ $("body").on("click", ".fadeout", function() {
 });
 
 var fader = "<div id='fader' style='opacity: 0.5;'></div>";
-// var $overlay = $("<div id='overlay'></div>");
-// $("body").append($overlay);
-
-/*========================================
-=            CUSTOM FUNCTIONS            =
-========================================*/
 
 var toggleNav = function() {
   if($("#nav-bar").hasClass("show-nav")) {
@@ -97,7 +115,7 @@ var fade_out = function() {
     $("#fader").remove();
   });
 }
-
+*/
 
 /*========================================
 =                LIGHTBOX                =
