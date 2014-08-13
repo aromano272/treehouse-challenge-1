@@ -42,19 +42,22 @@ HEADING
 
 .main-heading {
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
+  display: block;
+  width: 20em;
+  padding: 10px;
 }
 
 .main-heading h1 {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  padding: 15px 0;
+  padding: 15px 0 10px 0;
   font-size: 1.75em;
   line-height: 0.8em;
   font-weight: 900;
 }
 
-h2 {
+.main-heading h2 {
   font-size: 1.2em;
   margin: -5px 0 0;
   font-weight: 300;

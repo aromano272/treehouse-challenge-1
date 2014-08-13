@@ -46,12 +46,12 @@ body {
 
 
 
-h2 {
-  text-shadow: 2px 2px 2px #245182;
+.main-heading h2 {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
 }
 
 .main-heading h1 {
-  text-shadow: 1px 1px 4px #6188BD;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -161,11 +161,17 @@ HIDING NAV BAR GAPPS STYLE
   z-index: 4;
 }
 
-#wrapper {
-  /* realigns content because of header{position:fixed;} */
-  /*padding: 8.75em;  no longer need since header:fixed was bad */
+.global-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 
+.global-wrapper.show-nav {
+  overflow: hidden;
+}
 
 
 /********************************

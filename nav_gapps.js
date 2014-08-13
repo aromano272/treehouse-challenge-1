@@ -3,28 +3,46 @@
 ========================================*/
 
 var $menuOverlay = $("<div class='menu-overlay unselectable'></div>");
-var $navbar = $(".main-nav");
+var $mainNavToggle = $(".toggle-main-nav");
+var $mainNav = $(".main-nav");
+var $globalWrapper = $(".global-wrapper");
+
 $("body").append($menuOverlay);
 
 
 $(".toggle-main-nav").click(function() {
-  if($navbar.hasClass("show-nav")) {
-    // nav close
-    $navbar.removeClass("show-nav");
-    // fade in content
-    $menuOverlay.stop(true,false).fadeOut(1000);    
+  if($mainNav.hasClass("show-nav")) {
+    hideMainNav();
   } else {
-    // nav open
-    $navbar.addClass("show-nav");
-    // fade out content
-    $menuOverlay.stop(true,false).fadeIn(1000);
+    showMainNav();
   }
 });
+
+var showMainNav = function() {
+  // nav open
+  $mainNav.addClass("show-nav");
+  $mainNavToggle.addClass("show-nav");
+  $globalWrapper.addClass("show-nav");
+  // fade out content
+  $menuOverlay.stop(true,false).fadeIn(200);
+}
+
+var hideMainNav = function() {
+  // nav close
+  $mainNav.removeClass("show-nav");
+  $mainNavToggle.removeClass("show-nav");
+  $globalWrapper.removeClass("show-nav");
+  // fade out content
+  $menuOverlay.stop(true,false).fadeOut(200);
+}
+
+
+
 
 // fades in content on menuOverlay click
 $menuOverlay.click(function() {
   // nav close
-  $navbar.removeClass("show-nav");
+  $menuBody.removeClass("show-nav");
   // fade in content
   $menuOverlay.stop(true,false).fadeOut(1000);
 });
