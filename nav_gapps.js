@@ -24,7 +24,7 @@ var showMainNav = function() {
   $mainNavToggle.addClass("show-nav");
   $globalWrapper.addClass("show-nav");
   // fade out content
-  $menuOverlay.stop(true,false).fadeIn(200);
+   $menuOverlay.stop(true,false).fadeIn(200);
 }
 
 var hideMainNav = function() {
@@ -42,7 +42,7 @@ var hideMainNav = function() {
 // fades in content on menuOverlay click
 $menuOverlay.click(function() {
   // nav close
-  $menuBody.removeClass("show-nav");
+  $mainNav.removeClass("show-nav");
   // fade in content
   $menuOverlay.stop(true,false).fadeOut(1000);
 });
@@ -52,7 +52,7 @@ $menuOverlay.click(function() {
 ========================================*/
 
 // add overlay
-var $overlay = $("<div class='lightbox-overlay'></div>");
+var $overlay = $("<div class='lightbox-overlay' style='position: fixed; overflow: hidden'></div>");
 $("body").append($overlay);
 // an image
 var $image = $("<img>");
