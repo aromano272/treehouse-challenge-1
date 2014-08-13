@@ -67,7 +67,7 @@ h2 {
   width: 60px;
   height: 60px;
   background-color: lightgrey;
-  z-index: 2;
+  z-index: 5;
 
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
@@ -128,7 +128,7 @@ HIDING NAV BAR GAPPS STYLE
   padding: 0;
   margin: 0;
 
-  z-index: 2;
+  z-index: 3;
 
   transition: transform 0.1s ease-in-out;
   -webkit-transition: -webkit-transform 0.1s ease-in-out;
@@ -158,7 +158,7 @@ HIDING NAV BAR GAPPS STYLE
   padding: 0;
   height: 100px;
 
-  z-index: 10;
+  z-index: 2;
 }
 
 #wrapper {
@@ -193,11 +193,13 @@ EXPERIMENTAL
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 6;
   display: none;
   background: rgba(0,0,0,.7);
   position: absolute;
   text-align: center;
+
+  overflow: hidden;
 }
 
 .lightbox-overlay img {
@@ -233,7 +235,7 @@ EXPERIMENTAL
   left: 0;
   background-color: rgba(0,0,0,.7);
   position: absolute;
-  z-index: 1;
+  z-index: 6;
   display: none;
 }
 

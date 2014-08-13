@@ -7,25 +7,29 @@
     <!-- Google Fonts yo! -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:900%7COpen+Sans:300italic,400italic,700italic,400,700%7COpen+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     <link rel="stylesheet" href="css/experimental.css">
     <!-- width=device-width: makes it impossible to zoom out; maximum-scale=1.0: makes it impossible to zoom in -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body>
-    <header>
-      <a href="index.html" id="logo">
+  
+  <body style="overflow: hidden">
+    <header class="main-header">
+      <a href="index.html" class="main-heading">
         <h1>Andre Romano</h1>
         <h2>Web developer</h2>
       </a>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="selected">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <a href="#" class="toggle-main-nav unselectable"><p>Close Menu</p><span></span></a>
     </header>
+    
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="about.html" class="selected">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
     <div id="wrapper">
       <section>
