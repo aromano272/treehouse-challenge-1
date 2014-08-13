@@ -40,7 +40,7 @@ header {
   width: 100%;
 }
 
-#logo {
+.main-heading {
   text-align: center;
   margin: 0;
 }
@@ -70,20 +70,10 @@ h3 {
 NAVIGATION
 ********************************/
 
-nav {
-  text-align: center;
-  padding: 10px 0;
-  margin: 15px 0 0;
-}
-
 nav ul {
   list-style: none;
   margin: 0 10px;
   padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
 }
 
 nav a {

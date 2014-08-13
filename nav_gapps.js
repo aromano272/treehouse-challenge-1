@@ -1,41 +1,13 @@
 /*========================================
-=               DEPRECATED               =
-========================================*/
-
-// 19
-// Doesnt work since we cant add and eventlistener to an element that still doesnt exist
-// $(function() {
-//   $(".fadeout").click(function () {
-//     toggleNav();
-//     console.log("sdada");
-//   });
-// });
-
-// 69
-// var toggleFader = function() {
-//   if($("#fader").length) {
-//     $("#fader").stop().fadeOut(1000, function(){
-//       $(this).remove();
-//     });
-//     // $("#fader").remove();
-//     console.log("fader removed");
-//   } else {
-//     $(fader).hide().appendTo("body").stop().fadeIn(1000);
-//     console.log("fader added");
-//   }
-// }
-
-
-/*========================================
 =         GAPPS MENU DIF APPROACH        =
 ========================================*/
 
-var $menuOverlay = $("<div id='menu-overlay'></div>");
-var $navbar = $("#nav-bar");
+var $menuOverlay = $("<div class='menu-overlay unselectable'></div>");
+var $navbar = $(".main-nav");
 $("body").append($menuOverlay);
 
 
-$(".toggle-nav").click(function() {
+$(".toggle-main-nav").click(function() {
   if($navbar.hasClass("show-nav")) {
     // nav close
     $navbar.removeClass("show-nav");
@@ -55,6 +27,52 @@ $menuOverlay.click(function() {
   $navbar.removeClass("show-nav");
   // fade in content
   $menuOverlay.stop(true,false).fadeOut(1000);
+});
+
+/*========================================
+=                LIGHTBOX                =
+========================================*/
+
+// add overlay
+var $overlay = $("<div class='lightbox-overlay'></div>");
+$("body").append($overlay);
+// an image
+var $image = $("<img>");
+$overlay.append($image);
+// a caption
+var $caption = $("<p id='caption'></p>");
+$overlay.append($caption);
+
+// capture the click event on a link
+$("#gallery a").click(function() {
+  event.preventDefault();
+  // show the overlay
+  $overlay.fadeIn(200);
+
+  // update overlay with the image linked in the link
+  var imageLocation = $(this).attr("href");
+  $image.attr("src", imageLocation);
+  // get childs p element text and set caption
+  var captionText = $(this).children("p").text();
+  $caption.text(captionText);
+})
+
+
+  
+  
+// when overlay is clicked
+$overlay.click(function() {
+  // hide the overlay
+  $(this).fadeOut(200);
+});
+
+// stops the propagation of event, in this case the click event, up the dom tree,
+// so when we click the image of the caption is doesnt trigger the click even on $overlay
+$image.click(function() {
+  event.stopPropagation();
+});
+$caption.click(function() {
+  event.stopPropagation();
 });
 
 
@@ -126,52 +144,33 @@ var fade_out = function() {
 }
 */
 
+
 /*========================================
-=                LIGHTBOX                =
+=               DEPRECATED               =
 ========================================*/
 
-// add overlay
-var $overlay = $("<div id='overlay'></div>");
-$("body").append($overlay);
-// an image
-var $image = $("<img>");
-$overlay.append($image);
-// a caption
-var $caption = $("<p id='caption'></p>");
-$overlay.append($caption);
+// 19
+// Doesnt work since we cant add and eventlistener to an element that still doesnt exist
+// $(function() {
+//   $(".fadeout").click(function () {
+//     toggleNav();
+//     console.log("sdada");
+//   });
+// });
 
-// capture the click event on a link
-$("#gallery a").click(function() {
-  event.preventDefault();
-  // show the overlay
-  $overlay.fadeIn(200);
-
-  // update overlay with the image linked in the link
-  var imageLocation = $(this).attr("href");
-  $image.attr("src", imageLocation);
-  // get childs p element text and set caption
-  var captionText = $(this).children("p").text();
-  $caption.text(captionText);
-})
-
-
-  
-  
-// when overlay is clicked
-$overlay.click(function() {
-  // hide the overlay
-  $(this).fadeOut(200);
-});
-
-// stops the propagation of event, in this case the click event, up the dom tree,
-// so when we click the image of the caption is doesnt trigger the click even on $overlay
-$image.click(function() {
-  event.stopPropagation();
-});
-$caption.click(function() {
-  event.stopPropagation();
-});
-
+// 69
+// var toggleFader = function() {
+//   if($("#fader").length) {
+//     $("#fader").stop().fadeOut(1000, function(){
+//       $(this).remove();
+//     });
+//     // $("#fader").remove();
+//     console.log("fader removed");
+//   } else {
+//     $(fader).hide().appendTo("body").stop().fadeIn(1000);
+//     console.log("fader added");
+//   }
+// }
   
 
 
