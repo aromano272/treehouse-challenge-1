@@ -42,9 +42,7 @@ var hideMainNav = function() {
 // fades in content on menuOverlay click
 $menuOverlay.click(function() {
   // nav close
-  $mainNav.removeClass("show-nav");
-  // fade in content
-  $menuOverlay.stop(true,false).fadeOut(1000);
+  hideMainNav();
 });
 
 /*========================================

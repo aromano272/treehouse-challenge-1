@@ -19,6 +19,7 @@ body {
   /* webkit transition has to have webkit transform as a property and not just regular transform */
   transition: transform 0.1s linear;
   -webkit-transition: -webkit-transform 0.1s linear;
+
 }
 
 /* Centers the image a bit */
@@ -86,6 +87,7 @@ body {
   margin-top: -1px;
   left: 50%;
   margin-left: -10px;
+
 }
 .toggle-main-nav span::before, .toggle-main-nav span::after {
   content: '';
