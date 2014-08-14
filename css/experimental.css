@@ -67,27 +67,28 @@ body {
   left: 0;
   width: 60px;
   height: 60px;
-  background-color: lightgrey;
-  z-index: 5;
+  background-color: royalblue;
+  border-radius: 5%;
 
+  z-index: 5;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
   overflow: hidden;
 
   cursor: pointer;
 }
+
+/* This created l'Hamburger icon */
 .toggle-main-nav span {
-  /* the span element is used to create the menu icon */
   position: absolute;
   display: block;
   width: 20px;
   height: 2px;
-  background: #000;
+  background: #fff;
   top: 50%;
   margin-top: -1px;
   left: 50%;
   margin-left: -10px;
-
 }
 .toggle-main-nav span::before, .toggle-main-nav span::after {
   content: '';
@@ -164,7 +165,7 @@ HIDING NAV BAR GAPPS STYLE
 
   z-index: 4;
 }
-
+/*
 .global-wrapper {
   top: 0;
   left: 0;
@@ -175,8 +176,9 @@ HIDING NAV BAR GAPPS STYLE
 .global-wrapper.show-nav {
   overflow: hidden;
   display: block;
+  position: fixed;
 }
-
+*/
 
 /********************************
 EXPERIMENTAL
