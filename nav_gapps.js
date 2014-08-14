@@ -7,7 +7,7 @@ var $mainNavToggle = $(".toggle-main-nav");
 var $mainNav = $(".main-nav");
 var $globalWrapper = $(".global-wrapper");
 
-$("body").append($menuOverlay);
+$globalWrapper.append($menuOverlay);
 
 
 $(".toggle-main-nav").click(function() {
@@ -51,7 +51,7 @@ $menuOverlay.click(function() {
 
 // add overlay
 var $overlay = $("<div class='lightbox-overlay' style='position: fixed; overflow: hidden'></div>");
-$("body").append($overlay);
+$globalWrapper.append($overlay);
 // an image
 var $image = $("<img>");
 $overlay.append($image);
