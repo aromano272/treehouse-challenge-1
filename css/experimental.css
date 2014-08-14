@@ -165,7 +165,7 @@ HIDING NAV BAR GAPPS STYLE
 
   z-index: 4;
 }
-/*
+
 .global-wrapper {
   position: absolute;
   width: 100%;
@@ -180,7 +180,7 @@ HIDING NAV BAR GAPPS STYLE
   display: block;
   position: fixed;
 }
-
+/*
 body {
   margin: 0;
   overflow-x: hidden;
