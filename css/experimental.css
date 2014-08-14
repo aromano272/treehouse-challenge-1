@@ -167,6 +167,8 @@ HIDING NAV BAR GAPPS STYLE
 }
 /*
 .global-wrapper {
+  position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   bottom: 0;
@@ -178,8 +180,15 @@ HIDING NAV BAR GAPPS STYLE
   display: block;
   position: fixed;
 }
-*/
 
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: static;
+  word-wrap: break-word;
+}
+*/
 /********************************
 EXPERIMENTAL
 *****************************/
